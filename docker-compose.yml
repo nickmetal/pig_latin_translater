@@ -1,8 +1,0 @@
-version: '2.1'
-
-services:
-  aiohttp-example:
-    image: aiohttp-example
-    build: .
-    ports:
-      - 8000:8000

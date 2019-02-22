@@ -1,0 +1,1 @@
+from .translation_resource import translation_handler

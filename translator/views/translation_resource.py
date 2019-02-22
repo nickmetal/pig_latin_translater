@@ -1,3 +1,0 @@
-import aiohttp
-
-print(aiohttp)

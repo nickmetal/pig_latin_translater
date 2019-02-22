@@ -1,14 +1,16 @@
-FROM python3.7:alpine
+FROM python:3.7-alpine
 
-LABEL Name=aiohttp-example Version=0.0.1
+LABEL Name=epl-translator Version=1.0.0
 EXPOSE 8000
+
+# TODO research multi stage build
+RUN apk add --update make
 
 WORKDIR /opt/app
 ADD . /opt/app
 
-# Using pip:
-# TODO add make reqst installation cmd
-RUN python -m pip install -r requirements.txt
+RUN make install
+RUN make tests
 
-# TODO add make run cmd
-CMD ["python", "app.py"]
+CMD make run_locally
+
