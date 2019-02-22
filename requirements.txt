@@ -1,0 +1,5 @@
+aiohttp==3.5.4
+pytest==4.3.0
+pylint==2.2.2
+mypy==0.670
+black==18.9b0
