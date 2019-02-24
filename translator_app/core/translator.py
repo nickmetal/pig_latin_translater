@@ -44,7 +44,8 @@ class EnglishToPigLatinTranslator(AbstractTranslator):
     __dialect_cls__ = PigLatinDialectEnum
 
     def _convert_word(self, word: str, sep: str) -> str:
-        VOWELS = ("a", "e", "i", "o", "u")
+        VOWELS = "aeiou"
+
         if word[0] in VOWELS:
             return f"{word}{sep}{self.dialect.value}"
 
