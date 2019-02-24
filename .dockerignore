@@ -1,9 +1,14 @@
 Dockerfile*
 docker-compose*
+.pytest_cache
+.mypy_cache
 .dockerignore
 .git
 .gitignore
 .env
+__pycache__
+*/__pycache__/
+/*/__pycache__/
 */bin
 */obj
 README.md

@@ -22,10 +22,14 @@ restart:
 stop:
 	docker stop $(CONTAINER_NAME)
 
+mypy:
+	# requiere mypy package installed
+	mypy --ignore-missing-imports translator_app && echo "ok"
+
 tests:
-	python3.7 -m mypy --ignore-missing-imports translator_app
+	python3.7 -m pytest -s -x --tb=short tests
 
 .DEFAULT_GOAL := help
 
 
-.PHONY: build start test tests install run run_locally restart stop
+.PHONY: build start test tests install run run_locally restart stop mypy

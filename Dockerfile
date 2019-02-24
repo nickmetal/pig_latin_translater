@@ -6,11 +6,13 @@ EXPOSE 8000
 # TODO research multi stage build
 RUN apk add --update make
 
+COPY requirements.txt /opt/app/
+COPY Makefile /opt/app/
+
 WORKDIR /opt/app
+RUN make install
+
 ADD . /opt/app
 
-RUN make install
 RUN make tests
-
 CMD make run_locally
-

@@ -2,6 +2,14 @@
 
 REST Web server to translate english phrases to pig latin.
 
+#### Dialects
+
+| dialect | input text | output    |
+|---------|------------|-----------|
+| yay     | hello      | ello-hyay |
+| way     | hello      | ello-hway |
+| ay      | hello      | ello-hay  |
+
 ### Install dependencies
 
 1. Install `cmake` utility.
@@ -21,5 +29,6 @@ $ make run
 ```sh
 $ make install
 $ make run_locally
-$ curl http://localhost:8000/translation/eng_to_pig_latin?text=hello
+$ curl http://localhost:8000/translation/eng_to_pig_latin?text=hell&dialect=ay
+{"translated_text": "ell-hay"}
 ```
