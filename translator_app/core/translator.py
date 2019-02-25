@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from enum import Enum
-from aiohttp.client import ClientSession
 
 from .errors import UnsupportedDialectError, TranslationTypeNotFoundError
 
